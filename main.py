@@ -1,7 +1,11 @@
 # Welcome to the banker roulette 
+import random
 
-names_string = input("Please add the names of the people to pay the restaurant's bill")
+names_string = input("Add the names joining the payment roulette (separete with ',') \n")
 
 names = names_string.split(", ")
+total_names = len(names)
 
-print(names)
+random_number = random.randint(0, total_names -1)
+
+print(f"The choosed's name is : \n {names[random_number]}")
